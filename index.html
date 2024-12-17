@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doa Ampunan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6g5z4z5e5e5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f9d2;
+            color: #333;
+            line-height: 1.6;
+            background-image: url('https://example.com/background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        header {
+            background: linear-gradient(to bottom, #8ab120, #cef16c);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            font-family: "Sofia", sans-serif;
+            font-size: 2.5em;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            position: sticky;
+            top: 0;
+            background: #99bf33;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            padding: 10px 15px;
+            border-radius: 5px;
+            flex: 1;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transform: scale(1.05); 
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background: #f9f9f9;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        h2 {
+            color: #4a4a4a;
+            border-bottom: 2px solid #99bf33;
+            padding-bottom: 10px;
+        }
+        blockquote {
+            background-color: #f0f8e0;
+            border-left: 5px solid #99bf33;
+            padding: 10px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        footer {
+            background: linear-gradient(to bottom, #99bf33, #b6db50);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        footer p {
+            color: #fff;
+            margin: 0;
+        }
+        .social-icons {
+            margin: 10px 0;
+        }
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #4a4a4a;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #99bf33;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #7a9e26;
+            transform: scale(1.05); 
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 20px; 
+            background-color: #99bf33;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            display: none; 
+            z-index: 1000; 
+        }
+        .back-to-top:hover {
+            background-color: #7a9e26;
+            transform: scale(1.05); 
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            header, footer {
+                padding: 15px;
+            }
+            section {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Doa Ampunan</div>
+        <nav>
+            <a href="#doa-diri">Doa Diri Sendiri</a>
+            <a href="#doa-orang-tua">Doa Orang Tua</a>
+            <a href="#ayat">Ayat Al-Qur'an</a>
+            <a href="#hadits">Hadits Terkait</a>
+            <a href="#tips">Tips Berdoa</a>
+        </nav>
+    </header>
+    <main>
+        <section id="doa-diri">
+            <h2>Doa Memohon Ampunan untuk Diri Sendiri</h2>
+            <p><strong>Arab:</strong> رَّبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَلِمَن دَخَلَ بَيْتِيَ مُؤْمِنًا وَلِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ وَلَا تَزِدِ الظَّالِمِينَ إِلَّا تَبَارًا</p>
+            <p><strong>Latin:</strong> Robbigh-fir lii wa liwaalidayya wa liman dakhola baitiya mu’minan wa lil mu’miniina wal mu’minaati wa laa tazidizh-zhoolimiina illaa tabaaroo.</p>
+            <blockquote><p><strong>Artinya:</strong> "Ya Tuhanku, ampunilah aku, ibu bapakku, dan siapa pun yang memasuki rumahku dengan beriman dan semua orang yang beriman laki-laki dan perempuan. Dan janganlah Engkau tambahkan bagi orang-orang yang zalim itu selain kehancuran."</p></blockquote>
+            <blockquote>
+                "Doa ini adalah bentuk permohonan ampun untuk diri sendiri, orang tua, dan orang-orang yang beriman."
+            </blockquote>
+            <p><strong>Sumber:</strong></p>
+            <ul>
+                <li><b>• Nama Surah:</b> Surah Nuh (Surah ke-71)</li>
+                <li><b>• Nomor Ayat:</b> 28</li>
+            </ul>
+            <p>Ini adalah doa yang dipanjatkan oleh Nabi Nuh AS ketika beliau berdoa untuk dirinya, keluarganya, dan para pengikut yang beriman, serta untuk kehancuran orang-orang yang zalim.</p>
+        </section>
+        <section id="doa-orang-tua">
+            <h2>Doa Memohon Ampunan untuk Orang Tua</h2>
+            <p><strong>Arab:</strong> اَللّهُمَّ اغْفِرْلِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَاكَمَارَبَّيَانِيْ صَغِيْرَا</p>
+            <p><strong>Latin:</strong> Alloohummaghfirlii waliwaalidayya warhamhumaa kama rabbayaanii shogiiraa.</p>
+            <blockquote><p><strong>Artinya:</strong> "Wahai Tuhanku, ampunilah aku dan Ibu Bapakku, sayangilah mereka seperti mereka menyayangiku diwaktu kecil."</p></blockquote>
+            <blockquote>
+                "Doa ini adalah doa yang umum dibaca oleh seorang anak."
+            </blockquote>
+            <p><strong>Sumber:</strong></p>
+            <ul>
+                <li><b>• Nama Surah:</b> Surah Al-Ahqaf (Surah ke-46)</li>
+                <li><b>• Nomor Ayat:</b> 15</li>
+            </ul>
+            <p>Ini adalah doa dari seorang anak yang berdoa untuk orang tuanya, memohon ampunan dan kasih sayang Allah, seperti halnya orang tua mengasihi dan merawatnya sejak kecil.</p>
+        </section>
+        <section id="ayat">
+            <h2>Surah Ghafir (Surah ke-40, ayat 60)</h2>
+            <p><strong>Arab :</strong> قَالَ رَبُّكُمُ ادْعُوْنِيْٓ اَسْتَجِبْ لَكُمْ ۗاِنَّ الَّذِيْنَ يَسْتَكْبِرُوْنَ عَنْ عِبَادَتِيْ سَيَدْخُلُوْنَ جَهَنَّمَ دَاخِرِيْنَ</p>
+            <p><strong>Latin:</strong> Wa qaala rabbukumud'ūnii astajib lakum, innallaziina yastakbirūna 'an 'ibaadatii sayadkhulūna jahannama daakhiriin.</p>
+            <blockquote><p><strong>Dan Tuhanmu berfirman:</strong> "Berdoalah kepada-Ku, niscaya akan Aku perkenankan bagimu. Sesungguhnya orang-orang yang sombong tidak mau menyembah-Ku akan masuk neraka Jahanam dalam keadaan hina dina."</p></blockquote>
+            <blockquote>
+                Ayat ini mengajarkan kita tentang pentingnya berdoa kepada Allah dengan penuh kepasrahan. Allah menjamin bahwa Dia akan mengabulkan doa hamba-Nya, sementara orang yang menyombongkan diri dan enggan beribadah kepada-Nya akan menerima balasan yang sangat buruk, yakni masuk ke neraka Jahannam dalam keadaan hina.
+            </blockquote>
+        </section>
+        <section id="hadits">
+            <h2>Hadits terkait Doa dan Ampunan</h2>
+            <ul>
+                <li><strong>1.Hadits Riwayat Abu Dawud:</strong>  
+                    <ul>
+                    <li><b>Asli Hadits </b> (Sunan Abu Dawud 1539):</li>
+                    <p>إِنَّ اللَّهَ تَعَالَى غَفُورٌ يُحِبُّ أَنْ يُغْفَرَ لِعِبَادِهِ</p>
+                    <blockquote> "Sesungguhnya Allah itu Maha Pengampun dan Dia menyukai orang yang memohon ampunan dari-Nya."</blockquote> 
+                    <li><strong>2.Hadits Riwayat Muslim:</strong>  
+                        <ul>
+                        <li><b>Asli Hadits </b> (Sahih Muslim 2677):</li>
+                        <p>مَنْ دَعَا اللَّهَ فَأَجَابَهُ</p>
+                        <blockquote> "Siapa yang berdoa kepada Allah, Allah akan mengabulkannya."</blockquote>
+                        </ul>
+                    </li>
+                </ul>
+        </section>
+        <section id="tips">
+            <h2>Tips Berdoa</h2>
+            <ul>
+                <li><strong>Baca doa dengan tulus dan ikhlas:</strong> Doa yang keluar dari hati yang bersih akan lebih mudah diterima oleh Allah.</li>
+                <li><strong>Lakukan doa secara rutin:</strong> Berdoalah dengan konsisten, baik dalam keadaan susah maupun senang.</li>
+                <li><strong>Mohon ampunan dengan sungguh-sungguh:</strong> Seperti yang dicontohkan dalam Al-Qur'an dan hadits, kita diminta untuk berdoa dengan penuh ketulusan dan kesungguhan.</li>
+            </ul>
+        </section>
+    </main>
+    <a href="#" class="back-to-top">Kembali ke Atas</a>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/cymowchie?igsh=dmszYTB0ejJtYjN4" aria-label ="Instagram"> 📷</a>
+            <p>Follow Instagram ku dong guys hehe.</p>
+        </div>
+        <p>&copy; 2024 Succymowchie.</p>
+    </footer>
+    <script>
+        const sections = document.querySelectorAll('section');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        window .addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        const backToTopButton = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { 
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' 
+            });
+        });
+    </script>
+</body>
+</html>
