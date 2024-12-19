@@ -8,257 +8,375 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6g5z4z5e5e5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f3f9d2;
-            color: #333;
-            line-height: 1.6;
-            background-image: url('https://example.com/background.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        header {
-            background: linear-gradient(to bottom, #8ab120, #cef16c);
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .logo {
-            font-family: "Sofia", sans-serif;
-            font-size: 2.5em;
-            color: #fff;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 10px;
-            position: sticky;
-            top: 0;
-            background: #99bf33;
-            z-index: 1000;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 500;
-            transition: background-color 0.3s, color 0.3s, transform 0.3s;
-            padding: 10px 15px;
-            border-radius: 5px;
-            flex: 1;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            transform: scale(1.05); 
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        section {
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            background: #f9f9f9;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        h2 {
-            color: #4a4a4a;
-            border-bottom: 2px solid #99bf33;
-            padding-bottom: 10px;
-        }
-        blockquote {
-            background-color: #f0f8e0;
-            border-left: 5px solid #99bf33;
-            padding: 10px;
-            margin: 10px 0;
-            font-style: italic;
-        }
-        footer {
-            background: linear-gradient(to bottom, #99bf33, #b6db50);
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        footer p {
-            color: #fff;
-            margin: 0;
-        }
-        .social-icons {
-            margin: 10px 0;
-        }
-        .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #4a4a4a;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 5px 0;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #99bf33;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .button:hover {
-            background-color: #7a9e26;
-            transform: scale(1.05); 
-        }
-        .back-to-top {
-            position: fixed;
-            bottom: 80px;
-            right: 20px; 
-            background-color: #99bf33;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
-            display: none; 
-            z-index: 1000; 
-        }
-        .back-to-top:hover {
-            background-color: #7a9e26;
-            transform: scale(1.05); 
-        }
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            header, footer {
-                padding: 15px;
-            }
-            section {
-                padding: 15px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                margin: 5px 0;
-            }
-        }
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f9d2;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('https://example.com/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background: linear-gradient(to bottom, #8ab120, #cef16c);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 0 0;
+}
+
+.logo {
+    font-family: "Sofia", sans-serif;
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    position: sticky;
+    top: 0;
+    background: #99bf33;
+    z-index: 1000;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #daff71;
+}
+
+.dropdown-toggle {
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.dropdown-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #99bf33;
+    z-index: 1000;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+    flex: 1;
+    text-align: center;
+    width: 100%;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto; /* Menambahkan margin atas untuk jarak antara header dan section */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    margin: 40px 0; /* Menambahkan margin atas dan bawah untuk jarak antara section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: #f9f9f9;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+h2 {
+    color: #7a9e26;
+    border-bottom: 2px solid #99bf33;
+    padding-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+blockquote {
+    background-color: #f0f8e0;
+    border-left:  5px solid #99bf33;
+    padding: 10px;
+    margin: 10px 0;
+    font-style: italic;
+    border-radius: 5px; /* Menambahkan border-radius untuk blockquote */
+}
+
+footer {
+    background: linear-gradient(to bottom,  #cef16c, #8ab120);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 20px 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    color: #fff;
+    margin: 0;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #4a4a4a;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #99bf33;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #7a9e26;
+    transform: scale(1.05);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #99bf33;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    display: none;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #7a9e26;
+    box-shadow: 0 4px 30px #daff71;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    header, footer {
+        padding: 15px;
+    }
+    section {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        margin: 5px 0;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
     </style>
 </head>
 <body>
     <header>
         <div class="logo">Doa Ampunan</div>
         <nav>
-            <a href="#doa-diri">Doa Diri Sendiri</a>
-            <a href="#doa-orang-tua">Doa Orang Tua</a>
-            <a href="#ayat">Ayat Al-Qur'an</a>
-            <a href="#hadits">Hadits Terkait</a>
-            <a href="#tips">Tips Berdoa</a>
+            <div class="dropdown">
+                <div class="dropdown-toggle">Menu</div>
+                <div class="nav-links">
+                    <a href="#doa-diri">Doa Diri Sendiri</a>
+                    <a href="#doa-orang-tua">Doa Orang Tua</a>
+                    <a href="#ayat">Ayat Al-Qur'an</a>
+                    <a href="#WaktuMustajab">Waktu Mustajab</a>
+                    <a href="#hadits">Hadits Terkait</a>
+                    <a href="#tips">Tips Berdoa</a>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <section id="doa-diri">
-            <h2>Doa Memohon Ampunan untuk Diri Sendiri</h2>
-            <p><strong>Arab:</strong> رَّبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَلِمَن دَخَلَ بَيْتِيَ مُؤْمِنًا وَلِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ وَلَا تَزِدِ الظَّالِمِينَ إِلَّا تَبَارًا</p>
-            <p><strong>Latin:</strong> Robbigh-fir lii wa liwaalidayya wa liman dakhola baitiya mu’minan wa lil mu’miniina wal mu’minaati wa laa tazidizh-zhoolimiina illaa tabaaroo.</p>
-            <blockquote><p><strong>Artinya:</strong> "Ya Tuhanku, ampunilah aku, ibu bapakku, dan siapa pun yang memasuki rumahku dengan beriman dan semua orang yang beriman laki-laki dan perempuan. Dan janganlah Engkau tambahkan bagi orang-orang yang zalim itu selain kehancuran."</p></blockquote>
-            <blockquote>
-                "Doa ini adalah bentuk permohonan ampun untuk diri sendiri, orang tua, dan orang-orang yang beriman."
-            </blockquote>
-            <p><strong>Sumber:</strong></p>
-            <ul>
-                <li><b>• Nama Surah:</b> Surah Nuh (Surah ke-71)</li>
-                <li><b>• Nomor Ayat:</b> 28</li>
-            </ul>
-            <p>Ini adalah doa yang dipanjatkan oleh Nabi Nuh AS ketika beliau berdoa untuk dirinya, keluarganya, dan para pengikut yang beriman, serta untuk kehancuran orang-orang yang zalim.</p>
+            <h2>Tata Cara Membaca Doa Memohon Ampunan</h2>
+            <p>Dalam ajaran Islam menyebutkan bahwa seseorang yang telah memohon ampun kepada Allah SWT berarti dia telah bertaubat. Apabila kesalahan yang dilakukannya tergolong dosa besar maka untuk memohon ampunan nggak hanya bisa dengan membaca doa saja. Untuk itulah, kamu harus memahami bagaimana tata cara membaca doa memohon ampunan agar dosa-dosamu diampuni oleh Allah SWT.</p>
+            <blockquote><p><b>• </b>Mensucikan diri dengan berwudhu atau mandi besar karena saat bermunajat kepada Allah keadaan badan harus suci. Mensucikan diri akan menghilangkan hadast besar dan kecil.</p>
+            <p><b>• </b>Melaksanakan sholat taubat. Sebelum memanjatkan doa memohon ampunan, alangkah baiknya jika diawali dengan melaksanakan sholat taubat.</p>
+            <p><b>• </b>Membaca sholawat nabi. Setelah selesai sholat taubat maka lanjutkan dengan membaca sholawat nabi agar mendapatkan rahmat dari Allah SWT.</p>
+            <p><b>• </b>Melantunkan puji-pujian kepada Allah SWT dengan membaca asmaul husna</p>
+            <p><b>• </b>Membaca istighfar taubat nasuha, barang siapa yang membaca istighfar 100 kali dalam sehari maka dosa-dosanya akan diampuni meskipun sebanyak buih di lautan.</p></blockquote>
+            <p><strong>Arab : </strong> أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيَّ الْقَيُّومَ وَأَتُوبُ إِلَيْه</p>
+            <p><strong>Latin :</strong> Astaghfirullohal ‘azhim alladzi la ilaha illa huwal hayyul qoyyum wa atubu ilaih.</p>
+            <blockquote><p><strong>Artinya : </strong>“Aku meminta ampunan kepada Allah yang Maha Agung, tiada tuhan selain Dia yang Maha Hidup lagi Maha Berdiri Sendiri, dan aku bertaubat kepada-Nya.”</p></blockquote>
+            <p>Setelah membaca istighfar taubat nasuha dapat dilanjutkan dengan membaca istighfar di bawah ini.</p>
+            <p><strong>Arab : </strong>اَللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ ، خَلَقْتَنِيْ وَأَنَا عَبْدُكُ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ ، أَعُوْذُ بِكَ مِن شَرِّ مَا صَنَعْتُ ، أَبُوْءُ لَكَ بِنِعْمَتِكِ َعَلَيَّ ، وَأَبُوْءُ بِذَنْبِيْ فاَغْفِر لِيْ فَإِنهَّ لَا يَغْفِرُ الذُّنُوْبَ إِلَّا أَنْتَ</p>
+            <p><strong>Latin : </strong>Allahumma anta robbi la illa ha illa anta kholaqtani wa ana ‘abduka wa ana ‘ala ‘ahdika wa wa’dika mas tatho’tu a’udzubika min syarri ma shona’tu abu u laka bini’matika ‘alayya wa wa abu u dibdzanbi fahgfirli fa innahu la yaghfirudz dzunaba illa anta.</p>
+            <blockquote><p><strong>Artinya : </strong>“Ya Allah, Engkau adalah Tuhanku. Tidak ada Tuhan selain Engkau yang telah menciptakanku. Aku adalah hamba-Mu. Dan aku atas tanggungan dan janji-Mu selama aku masih mampu. Aku berlindung kepada-Mu dari kejelekan yang telah aku perbuat. Aku mengakui nikmat yang Kau berikan kepadaku. Aku mengakui dosaku, maka ampunilah aku. Sesungguhnya tidak ada yang bisa mengampuni dosa-dosa kecuali Engkau.”</p></blockquote>
+            <p><b>• </b>Membaca doa memohon ampunan dengan sungguh-sungguh dan khusyuk.</p>
+            <h2>Kumpulan Doa Memohon Ampunan</h2>
+            <p>Ada beberapa pilihan doa memohon ampunan yang bisa kamu pilih. Buat kamu yang belum hafal, intip doa memohon ampunan berikut ini : </p>
+            <p><b>• Doa Memohon Ampunan dan Taubat</b></p>
+            <p><strong>Arab : </strong>اَللّهُمَّ اغْفِرْ لِيْ خَطِيْئَتِيْ، وَجَهْلِيْ، وَإِسْرَافِيْ فِي أَمْرِيْ، وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّيْ. اللّهُمَّ اغْفِرْ لِيْ جَدِّيْ وَهَزْلِيْ، وَخَطَئِيْ وَعَمْدِيْ، وَكُلُّ ذلِكَ عِنْدِيْ، اللّهُمَّ اغْفِرْ لِيْ مَا قَدَّمْتُ، وَمَا أَخَّرْتُ، وَمَا أَسْرَرْتُ، وَمَا أَعْلَنْتُ، وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّيْ، أَنْتَ الْمُقَدِّمُ، وَأَنْتَ الْمُؤَخِّرُ، وَأَنْتَ عَلَى كُلِّ شَيْءٍ قَدِيْرٌ</p>
+            <P><strong>Latin : </strong>Allahummaghfir li khathi’ati wa jahli, wa israfi fi amri, wa ma anta a’lamu bihi minni. Allahummaghfir li jiddi wa hazli, wa khatha’i wa ‘amdi. Wa kullu dzalika ‘indi. Allahummaghfir li ma qadamtu wa ma akhkhartu, wa ma asrartu, wa ma a‘lantu, wa ma anta a’lamu bihi minni. Antal muqaddimu wa antal mu’akhkhiru, wa anta ‘ala kulli syai’in qadirun</P>
+            <blockquote><p><strong>Artinya : </strong>“Ya Tuhanku, ampunilah kekeliruan dan kebodohanku, kelewatan batasku dalam sebuah hal, dan dosaku yang mana Kau lebih tahu dariku. Tuhanku, ampunilah dosaku dalam serius dan gurauanku, kekeliruan, dan kesengajaanku. Apa pun itu semua berasal dariku. Tuhanku, ampunilah dosaku yang terdahulu dan terkemudian, dosa yang kusembunyikan dan kunyatakan, dan dosa yang mana Kau lebih tahu dariku. Kau Maha Terdahulu. Kau Maha Terkemudian. Kau Maha Kuasa atas segala sesuatu.”</p></blockquote>
+            <p><b>• Doa Memohon Ampunan Atas Dosa yang Terulang</b></p>
+            <p><strong>Arab : </strong>اللهم اني أستغفرك مما تبت اليك منه ثم عدت فيه وأستغفرك مما جعلته على نفسي ثم لا أف به لك وأستغفرك مما زعمت عني أردت به وجهك فخالط قلبي منه ما قد عملت</p>
+            <p><strong>Latin : </strong>Allahumma inni astaghfiruka mimma tubtu ilaika minhu summa udtu fih wa astaghfiruka mimma ja’altahu ala nafsi summa la uffi bihi laka wa astaghfiruka mima za’amta anni aradtu bihi wajhaka fakhalata qalbi minhu ma qad amiltu</p>
+            <blockquote><p><strong>Artinya : </strong>“Ya Tuhan, aku memohon ampun kepadamu dari apa-apa yang telah aku sesali lalu aku mengulanginya, dan aku memohon ampun atas apa yang telah Engkau tetapkan namun aku tak melakukannnya, dan aku memohon ampun atas dugaanku terhadap-Mu yang membuat hatiku resah.”</p></blockquote>
+            <p><b>• Doa Memohon Ampunan Atas Segala Kesalahan yang Telah Diperbuat</b></p>
+            <p><strong>Arab : </strong>رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ ۖ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا ۚ أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ</p>
+            <p><strong>Latin : </strong>Rabbana la tuakhidzna innasina au akhthoqna, rabbana wa la takhmil ‘alaina ishran kama khamaltahu alal ladzina min qoblina, rabbana wa la tukhammilna ma la thoqota lana bihi, wa’fu anna, waghfirlana, warkhamna anta maulana fanshurna ‘alal qoumil kafirin</p>
+            <blockquote><p><strong>Artinya : </strong> “Ya Tuhan kami, janganlah Engkau hukum kami jika kami lupa atau kami melakukan kesalahan. Ya Tuhan kami, janganlah Engkau bebani kami dengan beban yang berat sebagaimana Engkau bebankan kepada orang-orang sebelum kami. Ya Tuhan kami, janganlah Engkau pikulkan kepada kami apa yang tidak sanggup kami memikulnya. Maafkanlah kami, ampunilah kami, dan rahmatilah kami. Engkaulah pelindung kami maka tolonglah kami menghadapi orang-orang kafir.”</p></blockquote>
         </section>
         <section id="doa-orang-tua">
-            <h2>Doa Memohon Ampunan untuk Orang Tua</h2>
-            <p><strong>Arab:</strong> اَللّهُمَّ اغْفِرْلِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَاكَمَارَبَّيَانِيْ صَغِيْرَا</p>
-            <p><strong>Latin:</strong> Alloohummaghfirlii waliwaalidayya warhamhumaa kama rabbayaanii shogiiraa.</p>
-            <blockquote><p><strong>Artinya:</strong> "Wahai Tuhanku, ampunilah aku dan Ibu Bapakku, sayangilah mereka seperti mereka menyayangiku diwaktu kecil."</p></blockquote>
-            <blockquote>
-                "Doa ini adalah doa yang umum dibaca oleh seorang anak."
-            </blockquote>
-            <p><strong>Sumber:</strong></p>
-            <ul>
-                <li><b>• Nama Surah:</b> Surah Al-Ahqaf (Surah ke-46)</li>
-                <li><b>• Nomor Ayat:</b> 15</li>
-            </ul>
-            <p>Ini adalah doa dari seorang anak yang berdoa untuk orang tuanya, memohon ampunan dan kasih sayang Allah, seperti halnya orang tua mengasihi dan merawatnya sejak kecil.</p>
+            <h2>Doa untuk Orang Tua</h2>
+            <p><strong>Arab : </strong> اَللّهُمَّ اغْفِرْلِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَاكَمَارَبَّيَانِيْ صَغِيْرَا</p>
+            <p><strong>Latin : </strong>Allahumma firlii wa liwaa lidhayya warham humaa kamaa rabbayaa nii shaghiraa.</p>
+            <blockquote><p><strong>Artinya : </strong> "Wahai Tuhanku. ampunilah aku dan kedua orang tuaku (ibu dan Bapakku), sayangilah mereka seperti mereka menyayangiku waktu aku kecil."</p></blockquote>
+
+            <h2>Doa untuk Orang Tua yang Sedang Sakit</h2>
+            <p><strong>Arab : </strong>اَللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ البَاسَ، اِشْفِ أَنْتَ الشَّافِي، لاَ شِفَاءَ إِلاَّ شِفَاؤُكَ شِفَاءً لاَ يُغَادِرُ سَقَمًا</p>
+            <p><strong>Latin : </strong>Allahumma Rabbannasi adzhibi al-ba'sa. Isyfi anta as-syaafiyyu laa syifaa-a illa syifaa-uka syifaa-an laa yughadiru saqama.</p>
+            <blockquote><p><strong>Artinya : </strong> "Ya Allah, Tuhan manusia, hilangkanlah penyakit ini. Sembuhkanlah, hanya Engkaulah yang Maha Menyembuhkan. Tidak ada kesembuhan selain kesembuhan dari-Mu dengan kesembuhan yang tidak menimbulkan rasa sakit."</p></blockquote>
+
+            <h2>Doa Kedua Orang Tua dan Keluarga</h2>
+            <p><strong>Arab : </strong>اَللّٰهُمَّ اغْفِرْلِىْ ذُنُوْبِىْ وَلِوَالِدَىَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِىْ صَغِيْرًا. وَلِجَمِيْعِ الْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ،اَلْاَحْيَآءِ مِنْهُمْ وَاْلاَمْوَاتِ، وَتَابِعْ بَيْنَنَا وَبَيْنَهُمْ بِالْخَيْرَاتِ، رَبِّ اغْفِرْ وَارْحَمْ وَاَنْتَ خَيْرُالرَّاحِمِيْنَ</p>
+            <p><strong>Latin : </strong>Allaahummaghfirlii dzunuubii waliwaalidayya warhamhumaa kamaa robbayaanii shoghiiro, waliljamii'il muslimiina walmuslimaati, walmu'miniina wal mu'minaati Al ahyaa'i minhum wal amwaati, wataabi' bainanaa wa bainahum bil khoiraati, robbighfir warham wa annta khoirur roohimiin</p>
+            <blockquote><p><strong>Artinya : </strong> "Ya Allah, berikanlah ampunan kepadaku atas dosa-dosaku dan dosa-dosa kedua orang tuaku, dan kasihanilah keduanya sebagaimana beliau berdua merawatku ketika aku masih kecil, begitu juga kepada seluruh kaum muslimin dan muslimat. Semua orang yang beriman, laki-laki maupun perempuan yang masih hidup maupun yang sudah meninggal dunia, dan ikutkanlah diantara kami dan mereka dengan kebaikan. Ya Allah, berilah ampun dan belas kasihanilah karena Engkaulah Tuhan yang lebih berbelas kasih"</p></blockquote>
+
+            <h2>Dalil yang Berkaitan dengan Orang Tua</h2>
+            <p><strong>Ada sejumlah dalil dalam Al-Qur'an dan hadits yang menerangkan perintah berbakti kepada orang tua dan keutamaannya. Berikut adalah beberapa dalil yang berkaitan dengan orang tua adalah sebagai berikut:</strong></p>
+            <p><strong>• Perintah Mendoakan Kedua Orang Tua</strong></p>
+            <p><strong>Arab : </strong>رَبَّنَا اغْفِرْ لِيْ وَلِوَالِدَيَّ وَلِلْمُؤْمِنِيْنَ يَوْمَ يَقُوْمُ الْحِسَاب</p>
+            <blockquote><p><strong>Artinya : </strong>"Ya Tuhan kami, ampunilah aku, kedua orang tuaku, dan orang-orang mukmin pada hari diadakan perhitungan (hari Kiamat)."<strong> (QS Ibrahim: 41)</strong></p></blockquote>
+
+            <p><strong>• Perintah Berbuat Baik Kepada Orang Tua</strong></p>
+            <p><strong>Arab : </strong>وَوَصَّيْنَا الْاِنْسَانَ بِوَالِدَيْهِۚ حَمَلَتْهُ اُمُّهٗ وَهْنًا عَلٰى وَهْنٍ وَّفِصَالُهٗ فِيْ عَامَيْنِ اَنِ اشْكُرْ لِيْ وَلِوَالِدَيْكَۗ اِلَيَّ الْمَصِيْرُ</p>
+            <blockquote><p><strong>Artinya : </strong>"Kami mewasiatkan kepada manusia (agar berbuat baik) kepada kedua orang tuanya. Ibunya telah mengandungnya dalam keadaan lemah yang bertambah-tambah dan menyapihnya dalam dua tahun. (Wasiat Kami,) "Bersyukurlah kepada-Ku dan kepada kedua orang tuamu." Hanya kepada-Ku (kamu) kembali."<strong>(QS Luqman: 14)</strong></p></blockquote>
+
+            <p><strong>• Larangan Mengucapkan Perkataan yang Menyakitkan Kedua Orang Tua</strong></p>
+            <p><strong>Arab : </strong>َقَضٰى رَبُّكَ اَلَّا تَعْبُدُوْٓا اِلَّآ اِيَّاهُ وَبِالْوَالِدَيْنِ اِحْسٰنًاۗ اِمَّا يَبْلُغَنَّ عِنْدَكَ الْكِبَرَ اَحَدُهُمَآ اَوْ كِلٰهُمَا فَلَا تَقُلْ لَّهُمَآ اُفٍّ وَّلَا تَنْهَرْهُمَا وَقُلْ لَّهُمَا قَوْلًا كَرِيْمًا</p>
+            <blockquote><p><strong>Artinya : </strong>"Tuhanmu telah memerintahkan agar kamu jangan menyembah selain Dia dan hendaklah berbuat baik kepada ibu bapak. Jika salah seorang di antara keduanya atau kedua-duanya sampai berusia lanjut dalam pemeliharaanmu, maka sekali-kali janganlah engkau mengatakan kepada keduanya perkataan "ah" dan janganlah engkau membentak keduanya, serta ucapkanlah kepada keduanya perkataan yang baik."<strong>(QS Al-Isra': 23)</strong></p></blockquote>
+
         </section>
         <section id="ayat">
             <h2>Surah Ghafir (Surah ke-40, ayat 60)</h2>
-            <p><strong>Arab :</strong> قَالَ رَبُّكُمُ ادْعُوْنِيْٓ اَسْتَجِبْ لَكُمْ ۗاِنَّ الَّذِيْنَ يَسْتَكْبِرُوْنَ عَنْ عِبَادَتِيْ سَيَدْخُلُوْنَ جَهَنَّمَ دَاخِرِيْنَ</p>
-            <p><strong>Latin:</strong> Wa qaala rabbukumud'ūnii astajib lakum, innallaziina yastakbirūna 'an 'ibaadatii sayadkhulūna jahannama daakhiriin.</p>
-            <blockquote><p><strong>Dan Tuhanmu berfirman:</strong> "Berdoalah kepada-Ku, niscaya akan Aku perkenankan bagimu. Sesungguhnya orang-orang yang sombong tidak mau menyembah-Ku akan masuk neraka Jahanam dalam keadaan hina dina."</p></blockquote>
+            <p><strong>Arab : </strong> قَالَ رَبُّكُمُ ادْعُوْنِيْٓ اَسْتَجِبْ لَكُمْ ۗاِنَّ الَّذِيْنَ يَسْتَكْبِرُوْنَ عَنْ عِبَادَتِيْ سَيَدْخُلُوْنَ جَهَنَّمَ دَاخِرِيْنَ</p>
+            <p><strong>Latin : </strong> Wa qaala rabbukumud'ūnii astajib lakum, innallaziina yastakbirūna 'an 'ibaadatii sayadkhulūna jahannama daakhiriin.</p>
+            <blockquote><p><strong>Dan Tuhanmu berfirman : </strong> "Berdoalah kepada-Ku, niscaya akan Aku perkenankan bagimu. Sesungguhnya orang-orang yang sombong tidak mau menyembah-Ku akan masuk neraka Jahanam dalam keadaan hina dina."</p></blockquote>
             <blockquote>
                 Ayat ini mengajarkan kita tentang pentingnya berdoa kepada Allah dengan penuh kepasrahan. Allah menjamin bahwa Dia akan mengabulkan doa hamba-Nya, sementara orang yang menyombongkan diri dan enggan beribadah kepada-Nya akan menerima balasan yang sangat buruk, yakni masuk ke neraka Jahannam dalam keadaan hina.
             </blockquote>
         </section>
-        <section id="hadits">
-            <h2>Hadits terkait Doa dan Ampunan</h2>
+        <section id="WaktuMustajab">
+            <h2>Waktu Mustajab</h2>
             <ul>
-                <li><strong>1.Hadits Riwayat Abu Dawud:</strong>  
-                    <ul>
-                    <li><b>Asli Hadits </b> (Sunan Abu Dawud 1539):</li>
-                    <p>إِنَّ اللَّهَ تَعَالَى غَفُورٌ يُحِبُّ أَنْ يُغْفَرَ لِعِبَادِهِ</p>
-                    <blockquote> "Sesungguhnya Allah itu Maha Pengampun dan Dia menyukai orang yang memohon ampunan dari-Nya."</blockquote> 
-                    <li><strong>2.Hadits Riwayat Muslim:</strong>  
-                        <ul>
-                        <li><b>Asli Hadits </b> (Sahih Muslim 2677):</li>
-                        <p>مَنْ دَعَا اللَّهَ فَأَجَابَهُ</p>
-                        <blockquote> "Siapa yang berdoa kepada Allah, Allah akan mengabulkannya."</blockquote>
-                        </ul>
-                    </li>
-                </ul>
+                <li><strong>Waktu-Waktu yang Dianjurkan untuk Berdoa Memohon Ampunan:</strong></li>
+                <p>Doa memohon ampunan kepada Allah SWT adalah amalan yang sangat dianjurkan dalam Islam. Meskipun doa bisa dibaca kapan saja, ada waktu yang lebih utama untuk berdoa, agar doa tersebut lebih diterima dan dikabulkan oleh Allah SWT. Berikut adalah beberapa waktu yang dianjurkan untuk berdoa memohon ampunan:</p>
+                <p><strong>1. Saat Tahajjud (Malam Hari)</strong></p>
+                <p> Waktu tahajjud adalah waktu yang sangat baik untuk berdoa dan memohon ampunan. Rasulullah SAW sering berdoa pada waktu malam, terutama di tengah malam. Allah SWT berjanji akan mengabulkan doa hamba-Nya yang berdoa pada waktu tersebut. Sebagaimana yang disebutkan dalam sebuah <b>hadits:</b></p>
+                <blockquote>"Sesungguhnya di surga ada pintu yang disebut Ar-Rayyan, tidak ada yang memasukinya kecuali orang-orang yang berpuasa. Jika mereka masuk, maka pintu itu akan ditutup dan tidak akan ada yang memasukinya lagi." (HR. Bukhari dan Muslim).</blockquote>
+                <p><strong>2. Saat Waktu Mustajab (Terutama antara Adzan dan Iqamah)</strong></p>
+                <p>Rasulullah SAW bersabda bahwa ada waktu mustajab untuk berdoa di antara adzan dan iqamah. Pada saat tersebut, doa yang dipanjatkan tidak akan sia-sia. Ini adalah waktu yang sangat baik untuk memohon ampunan Allah, karena Allah sangat mendengar doa umat-Nya, terutama pada waktu yang mulia ini.</p>
+                <p><strong>3. Saat Sujud dalam Shalat</strong></p>
+                <p>Sujud adalah posisi yang paling dekat dengan Allah. Saat kita sujud dalam shalat, kita berada dalam keadaan rendah di hadapan-Nya, dan ini adalah waktu yang sangat dianjurkan untuk memohon ampunan dengan penuh kesungguhan. Dalam keadaan sujud, kita dapat berdoa secara pribadi, meminta ampunan untuk segala dosa yang telah dilakukan.</p>
+                <p><strong>4. Saat Berpuasa</strong></p>
+                <p>Doa selama bulan Ramadan, terutama saat berbuka puasa, adalah waktu yang sangat mustajab. Rasulullah SAW bersabda bahwa orang yang berpuasa tidak akan ditolak doanya ketika berbuka. Ini adalah waktu yang penuh keberkahan, di mana doa memohon ampunan akan dikabulkan oleh Allah SWT.</p>
+                <p><strong>5. Pada Malam Lailatul Qadar</strong></p>
+                <p>Malam Lailatul Qadar adalah malam yang lebih baik dari seribu bulan. Doa pada malam ini sangat mustajab, termasuk doa memohon ampunan. Lailatul Qadar biasanya terjadi pada sepuluh malam terakhir bulan Ramadan. Maka, memanfaatkan malam-malam tersebut untuk berdoa dan memohon ampunan kepada Allah adalah amalan yang sangat dianjurkan.</p>
+                <p><strong>6. Hari Jumat, Terutama pada Waktu antara Ashar dan Maghrib</strong></p>
+                <p>Hari Jumat adalah hari yang sangat mulia dalam Islam. Pada hari ini, terdapat waktu tertentu yang sangat dianjurkan untuk berdoa. Waktu yang paling mustajab adalah antara waktu Ashar dan Maghrib. Doa yang dipanjatkan pada waktu ini sangat berpeluang besar untuk dikabulkan oleh Allah SWT.</p>
+            </ul>
+        </section>
+        <section id="hadits">
+            <h2>Hadits Doa Anak pada Orang Tua Jadi Amal Jariyah</h2>
+            <p><strong>Abu Hurairah RA berkata,</strong></p><p><strong>"Rasulullah SAW bersabda, </strong>'Apabila anak cucu Adam (manusia) meninggal maka terputuslah amalnya kecuali tiga hal saja, yaitu sedekah jariah, ilmu yang diambil manfaatnya oleh manusia, dan anak yang saleh yang berdoa untuknya."<strong>(HR Ahmad)</strong></p>
+            <p>Dalam hadits lain yang diriwayatkan dari <strong>Abu Hurairah RA berkata,</strong></p>
+            <p><strong> Rasulullah SAW bersabda, </strong>"Sesungguhnya Allah SWT meninggikan derajat seseorang setelah dia meninggal dunia, kemudian orang itu berkata, 'Ya Tuhanku, dari mana aku beroleh kedudukan yang sangat tinggi ini?' Maka dikatakan kepadanya, Anakmu telah memohonkan ampunan atas dosa-dosamu."<strong>(HR Ahmad dan Thabrani dalam Al Awsat)</strong></p>
         </section>
         <section id="tips">
             <h2>Tips Berdoa</h2>
             <ul>
-                <li><strong>Baca doa dengan tulus dan ikhlas:</strong> Doa yang keluar dari hati yang bersih akan lebih mudah diterima oleh Allah.</li>
-                <li><strong>Lakukan doa secara rutin:</strong> Berdoalah dengan konsisten, baik dalam keadaan susah maupun senang.</li>
-                <li><strong>Mohon ampunan dengan sungguh-sungguh:</strong> Seperti yang dicontohkan dalam Al-Qur'an dan hadits, kita diminta untuk berdoa dengan penuh ketulusan dan kesungguhan.</li>
+                <li><strong>Baca doa dengan tulus dan ikhlas : </strong> Doa yang keluar dari hati yang bersih akan lebih mudah diterima oleh Allah.</li>
+                <li><strong>Lakukan doa secara rutin : </strong> Berdoalah dengan konsisten, baik dalam keadaan susah maupun senang.</li>
+                <li><strong>Mohon ampunan dengan sungguh-sungguh : </strong> Seperti yang dicontohkan dalam Al-Qur'an dan hadits, kita diminta untuk berdoa dengan penuh ketulusan dan kesungguhan.</li>
             </ul>
         </section>
     </main>
     <a href="#" class="back-to-top">Kembali ke Atas</a>
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/cymowchie?igsh=dmszYTB0ejJtYjN4" aria-label ="Instagram"> 📷</a>
-            <p>Follow Instagram ku dong guys hehe.</p>
+    <footer style="background-color: #333; color: white; padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+        <div class="social-icons" style="margin-bottom: 20px;">
+            <a href="https://www.instagram.com/cymowchie?igsh=dmszYTB0ejJtYjN4" aria-label="Instagram" style="color: #fff; font-size: 30px; text-decoration: none; margin-right: 20px;">📷</a>
+            <a href="https://twitter.com" aria-label="Twitter" style="color: #fff; font-size: 30px; text-decoration: none; margin-right: 20px;">🐦</a>
+            <a href="https://www.facebook.com" aria-label="Facebook" style="color: #fff; font-size: 30px; text-decoration: none;">📘</a>
+            <p style="color: #fff; margin-top: 10px;">Follow Instagram, Twitter, & Facebook untuk update terbaru!</p>
         </div>
-        <p>&copy; 2024 Succymowchie.</p>
+        <div class="links" style="margin-bottom: 20px;">
+            <p style="color: #fff;">
+                <a href="/privacy-policy" style="color: #fbff52; text-decoration: none; margin-right: 15px;">Kebijakan Privasi</a>
+                <a href="/terms" style="color: #fbff52; text-decoration: none;">Syarat & Ketentuan</a>
+            </p>
+        </div>
+        <p style="color: #fff;">&copy; 2024 Succyprawesti. Semua hak dilindungi.</p>
+        <div class="footer-note" style="margin-top: 20px; color: #fff;">
+            <p>Terima kasih telah mengunjungi situs saya! Have a great day 🐧</p>
+        </div>
     </footer>
+    
     <script>
         const sections = document.querySelectorAll('section');
         const options = {
@@ -278,7 +396,7 @@
         sections.forEach(section => {
             observer.observe(section);
         });
-        window .addEventListener('scroll', () => {
+        window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 0) {
                 header.classList.add('scrolled');
@@ -301,6 +419,11 @@
                 top: 0,
                 behavior: 'smooth' 
             });
+        });
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        dropdownToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>
